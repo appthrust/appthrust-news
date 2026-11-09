@@ -1,0 +1,17 @@
+apiVersion: appthrust.io/v1alpha1
+kind: ApplicationStackDefinition
+metadata: { name: appthrust-news }
+spec:
+  display: { title: AppThrust News, category: collaborate, iconRef: { name: sparkles },
+             description: "Product news from AppThrust: releases, new marketplace apps, maintenance and incidents." }
+  components:
+    - id: web
+      definitionRef: { name: web-service, version: v1 }
+      defaultValues: { port: 8080, minScale: 1, readinessProbePath: /readyz, livenessProbePath: /healthz, publicURLEnv: APPTHRUST_NEWS_PUBLIC_URL }
+  publish: { hostnameLabel: news }
+  access:
+    audiences: [appthrust-platform-api]
+    scopes: [openid, profile, email]
+  releaseIdentityEnvPrefix: APPTHRUST_NEWS
+  updatePolicy: { default: follow, allowed: [follow, pinned] }
+  versions: []   # written by hack/publish-entry.ts on tag; every element stream: "1"

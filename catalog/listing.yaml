@@ -1,0 +1,47 @@
+locales:
+  ja:
+    title: AppThrust News
+    tagline: AppThrust の最新情報を、いつもの Project で。
+    overview: |
+      リリース、新しいマーケットプレイスアプリ、メンテナンス、障害、イベント。AppThrust からのお知らせを、サインイン中の Project で読めます。
+
+      更新ポリシーを follow にすると、新しいお知らせがアプリの更新とともに届きます。未読の目印はブラウザーに保存されるので、まだ読んでいないお知らせを見つけられます。
+
+      利用にはサインインが必要です。アプリは利用者のデータをサーバーに保存しません。画面は日本語と英語に対応しています。
+  en:
+    title: AppThrust News
+    tagline: News from AppThrust, inside your Project.
+    overview: |
+      Read AppThrust releases, new marketplace app announcements, maintenance notices, incident updates and events inside your Project.
+
+      With the follow update policy, new announcements arrive automatically as the app updates. Unread markers are kept in your browser so you can spot news you have not read.
+
+      Sign-in is required. The app stores no user data on the server. The interface is available in Japanese and English.
+highlights:
+  - screenshot: home
+    locales:
+      ja:
+        title: Project でお知らせを確認
+        body: リリースや新しいアプリ、メンテナンス、障害、イベントの情報をまとめて読めます。更新ポリシー follow で新しいお知らせが届きます。
+      en:
+        title: Product news in your Project
+        body: Read releases, new marketplace apps, maintenance, incidents and events in one place. The follow update policy brings new announcements automatically.
+  - screenshot: item
+    locales:
+      ja:
+        title: 気になるお知らせを読む
+        body: サインインして記事を開き、詳しい内容を確認できます。画面は日本語と英語に対応。未読の目印はブラウザーに保存されます。
+      en:
+        title: Open an announcement to read more
+        body: Sign in and open an item for the details. The interface supports Japanese and English, and unread markers stay in your browser.
+screenshots:
+  - name: home
+    file: home.webp
+    alt:
+      ja: AppThrust News のお知らせ一覧。
+      en: The AppThrust News announcement list.
+  - name: item
+    file: item.webp
+    alt:
+      ja: AppThrust News の記事画面。
+      en: An announcement open in AppThrust News.

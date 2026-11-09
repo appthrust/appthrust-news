@@ -3,4 +3,4 @@ dist/
 .env
 .env.*
 *.tgz
-/agent-guide-server
+/appthrust-news-server

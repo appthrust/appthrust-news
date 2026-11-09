@@ -131,7 +131,15 @@ Never hardcode an estate hostname or Project ID.
 
 Content parses once at boot. A defect keeps `/healthz` alive, fails `/readyz`, so
 release-v2 keeps the previous edition serving. CI runs the same validation plus
-`hack/check-edition.ts`.
+`hack/check-edition.ts`, which compares HEAD with the latest earlier `v*` tag (a tag run
+excludes its own tag; no earlier tag passes):
+
+- an item present at the base must exist at HEAD;
+- a locale of an existing item is never removed, with or without `updatedAt`;
+- `publishedAt` of an existing item never changes;
+- a changed title or body needs `updatedAt` set (not before `publishedAt`) or advanced;
+- a locale added to an existing item needs no `updatedAt` and carries the item's original
+  `publishedAt`.
 
 ### HTTP surface
 

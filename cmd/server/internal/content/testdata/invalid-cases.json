@@ -1,0 +1,234 @@
+[
+  {
+    "directory": "missing-frontmatter",
+    "message": "missing frontmatter"
+  },
+  {
+    "directory": "unclosed-frontmatter",
+    "message": "unterminated frontmatter"
+  },
+  {
+    "directory": "invalid-yaml",
+    "message": "frontmatter"
+  },
+  {
+    "directory": "unknown-frontmatter",
+    "message": "field tytle not found"
+  },
+  {
+    "directory": "duplicate-frontmatter",
+    "message": "already defined"
+  },
+  {
+    "directory": "multiple-yaml-documents",
+    "message": "frontmatter must contain one YAML document"
+  },
+  {
+    "directory": "missing-title",
+    "message": "title, summary, valid category and tags array are required"
+  },
+  {
+    "directory": "missing-summary",
+    "message": "title, summary, valid category and tags array are required"
+  },
+  {
+    "directory": "missing-category",
+    "message": "title, summary, valid category and tags array are required"
+  },
+  {
+    "directory": "missing-tags",
+    "message": "title, summary, valid category and tags array are required"
+  },
+  {
+    "directory": "empty-title",
+    "message": "title, summary"
+  },
+  {
+    "directory": "empty-summary",
+    "message": "title, summary"
+  },
+  {
+    "directory": "invalid-category",
+    "message": "valid category"
+  },
+  {
+    "directory": "invalid-tags",
+    "message": "frontmatter"
+  },
+  {
+    "directory": "null-tags",
+    "message": "tags array"
+  },
+  {
+    "directory": "invalid-pinned",
+    "message": "frontmatter"
+  },
+  {
+    "directory": "missing-published",
+    "message": "publishedAt must be RFC 3339"
+  },
+  {
+    "directory": "invalid-published",
+    "message": "publishedAt must be RFC 3339"
+  },
+  {
+    "directory": "invalid-updated",
+    "message": "updatedAt must be RFC 3339"
+  },
+  {
+    "directory": "early-updated",
+    "message": "updatedAt must not precede publishedAt"
+  },
+  {
+    "directory": "invalid-id",
+    "message": "invalid item id"
+  },
+  {
+    "directory": "missing-ja",
+    "message": "ja.md is required"
+  },
+  {
+    "directory": "unexpected-file",
+    "message": "an image file beside the item is required"
+  },
+  {
+    "directory": "unexpected-locale",
+    "message": "an image file beside the item is required"
+  },
+  {
+    "directory": "nested-file",
+    "message": "only files beside the item are allowed"
+  },
+  {
+    "directory": "locale-publishedAt",
+    "message": "must match across locales"
+  },
+  {
+    "directory": "locale-category",
+    "message": "must match across locales"
+  },
+  {
+    "directory": "locale-pinned",
+    "message": "must match across locales"
+  },
+  {
+    "directory": "unknown-template",
+    "message": "MissingValue"
+  },
+  {
+    "directory": "template-syntax",
+    "message": "unclosed action"
+  },
+  {
+    "directory": "template-if",
+    "message": "only Values placeholders"
+  },
+  {
+    "directory": "template-range",
+    "message": "only Values placeholders"
+  },
+  {
+    "directory": "template-function",
+    "message": "only Values placeholders"
+  },
+  {
+    "directory": "template-pipeline",
+    "message": "only Values placeholders"
+  },
+  {
+    "directory": "template-assignment",
+    "message": "only Values placeholders"
+  },
+  {
+    "directory": "template-literal",
+    "message": "only Values placeholders"
+  },
+  {
+    "directory": "template-nested",
+    "message": "only Values placeholders"
+  },
+  {
+    "directory": "template-definition",
+    "message": "only Values placeholders"
+  },
+  {
+    "directory": "html-block",
+    "message": "raw HTML is not allowed"
+  },
+  {
+    "directory": "html-inline",
+    "message": "raw HTML is not allowed"
+  },
+  {
+    "directory": "html-comment",
+    "message": "raw HTML is not allowed"
+  },
+  {
+    "directory": "remote-http",
+    "message": "remote images are not allowed"
+  },
+  {
+    "directory": "remote-https",
+    "message": "remote images are not allowed"
+  },
+  {
+    "directory": "remote-protocol-relative",
+    "message": "remote images are not allowed"
+  },
+  {
+    "directory": "remote-encoded",
+    "message": "remote images are not allowed"
+  },
+  {
+    "directory": "remote-reference",
+    "message": "remote images are not allowed"
+  },
+  {
+    "directory": "remote-template",
+    "message": "remote images are not allowed"
+  },
+  {
+    "directory": "image-data",
+    "message": "remote images are not allowed"
+  },
+  {
+    "directory": "image-absolute",
+    "message": "remote images are not allowed"
+  },
+  {
+    "directory": "image-query",
+    "message": "remote images are not allowed"
+  },
+  {
+    "directory": "image-fragment",
+    "message": "remote images are not allowed"
+  },
+  {
+    "directory": "image-bad-url",
+    "message": "remote images are not allowed"
+  },
+  {
+    "directory": "image-missing",
+    "message": "existing file beside the item"
+  },
+  {
+    "directory": "image-traversal",
+    "message": "existing file beside the item"
+  },
+  {
+    "directory": "image-encoded-traversal",
+    "message": "existing file beside the item"
+  },
+  {
+    "directory": "image-empty",
+    "message": "existing file beside the item"
+  },
+  {
+    "directory": "too-many-pinned",
+    "message": "at most 3 items may be pinned"
+  },
+  {
+    "directory": "unexpected-root",
+    "message": "an item directory is required"
+  }
+]
