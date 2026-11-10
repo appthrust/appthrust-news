@@ -2,6 +2,7 @@
 title: Publish components on the Project's domain or a custom domain
 summary: From a component's Publish delivery tab, you can publish an application over HTTPS at a URL on the Project's domain or on a custom domain. The publish badge shows the TLS state.
 publishedAt: 2026-05-12T11:00:00+09:00
+updatedAt: 2026-11-10T12:00:00+09:00
 category: feature
 tags: [dashboard, publish, domains]
 ---
@@ -25,4 +26,4 @@ You can now publish a component over HTTPS at a URL on the Project's domain or o
 - Custom domains are added in the Project's Domains tab. A new domain cannot be chosen until it is ready for publishing.
 - You cannot publish while Publish prerequisites shows a blocking item, such as no port set on the component.
 - To change a published URL, unpublish and then publish again.
-- Ask your platform administrator how to obtain apth.
+- Get apth from [appthrust/cli on GitHub](https://github.com/appthrust/cli).

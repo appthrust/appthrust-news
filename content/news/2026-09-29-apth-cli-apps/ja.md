@@ -2,6 +2,7 @@
 title: apth CLI でアプリケーションの作成から公開までをターミナルで行えるようになりました
 summary: apth にブラウザーでのデバイスログインと `apth apps` コマンドが加わり、アプリケーションの作成、公開、環境変数とログの確認をターミナルで行えます。AI コーディングエージェント向けのスキルも同梱しました。
 publishedAt: 2026-09-29T11:00:00+09:00
+updatedAt: 2026-11-10T12:00:00+09:00
 category: feature
 tags: [apth, cli, apps]
 ---
@@ -27,4 +28,4 @@ tags: [apth, cli, apps]
 
 - テンプレートから作成するには、Project にアプリ作成用の GitHub 接続が必要です。
 - 秘密にしたい値は `--sensitive KEY` を付けて設定すると、以後は表示されません。
-- apth の入手方法は、プラットフォームの管理者に確認してください。
+- apth は [GitHub の appthrust/cli](https://github.com/appthrust/cli) から入手できます。

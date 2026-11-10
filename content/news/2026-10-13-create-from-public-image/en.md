@@ -2,6 +2,7 @@
 title: Create applications from public images
 summary: You can now create an application from a public container image with apth, without registering registry credentials. In the Dashboard, the container port is detected from the image's EXPOSE.
 publishedAt: 2026-10-13T11:00:00+09:00
+updatedAt: 2026-11-10T12:00:00+09:00
 category: feature
 tags: [apth, dashboard, images]
 ---
@@ -24,4 +25,4 @@ You can now create an application from a public container image without register
 
 - With apth, omitting `--port` uses the template's default port, not `EXPOSE`.
 - In the Dashboard, you can only choose images already registered in the Project.
-- Ask your platform administrator how to obtain apth.
+- Get apth from [appthrust/cli on GitHub](https://github.com/appthrust/cli).

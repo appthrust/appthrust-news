@@ -2,6 +2,7 @@
 title: 公開イメージからアプリケーションを作れるようになりました
 summary: 公開されているコンテナイメージなら、レジストリの認証情報を登録せずに apth からアプリケーションを作れます。Dashboard では、コンテナのポートをイメージの EXPOSE から検出します。
 publishedAt: 2026-10-13T11:00:00+09:00
+updatedAt: 2026-11-10T12:00:00+09:00
 category: feature
 tags: [apth, dashboard, images]
 ---
@@ -24,4 +25,4 @@ tags: [apth, dashboard, images]
 
 - apth では、`--port` を省略するとテンプレートの既定ポートを使い、`EXPOSE` は使いません。
 - Dashboard で選べるのは、Project に登録済みのイメージです。
-- apth の入手方法は、プラットフォームの管理者に確認してください。
+- apth は [GitHub の appthrust/cli](https://github.com/appthrust/cli) から入手できます。
