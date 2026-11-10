@@ -2,6 +2,7 @@
 title: Update for 13 October 2026
 summary: This update brings reworked Dashboard navigation, the Data tab for Neon databases, cluster availability modes and a startup screen for stopped apps.
 publishedAt: 2026-10-13T10:00:00+09:00
+updatedAt: 2026-11-10T11:30:00+09:00
 category: release
 tags: [dashboard, database, cluster, apth]
 ---
@@ -15,8 +16,8 @@ Here are the main changes in this update.
 ## Applications
 
 - **Startup screen for stopped apps**: when you open an app that has stopped because it had no traffic, a page saying it is starting is shown straight away while it starts. Once the app is up, requests reach it as usual.
-- **Creating from public images**: you can now create an application from a public container image without registering registry credentials. For an image that needs authentication, you are shown the `apth registries create` command to register them.
-- **Automatic port detection**: if you leave out the container port, it is now taken from the image's `EXPOSE`. If it cannot be determined, you are asked to set the port or add `EXPOSE` to the Dockerfile.
+- **Creating from public images**: you can now create an application from a public container image with `apth apps create --image`, without registering registry credentials. For an image that needs authentication, you are shown the `apth registries create` command to register them. In the Dashboard, you can only choose images already registered in the Project.
+- **Automatic port detection**: in the Dashboard, if you leave out the container port, it is now taken from the image's `EXPOSE`. If it cannot be determined, you are asked to set the port or add `EXPOSE` to the Dockerfile. With apth, set it with `--port`.
 
 ## Databases
 
