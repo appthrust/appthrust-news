@@ -2,6 +2,7 @@
 title: Create and publish applications from the terminal with the apth CLI
 summary: apth now has browser-based device login and `apth apps` commands, so you can create and publish an application and work with its environment variables and logs from the terminal. It also ships skills for AI coding agents.
 publishedAt: 2026-09-29T11:00:00+09:00
+updatedAt: 2026-11-10T12:00:00+09:00
 category: feature
 tags: [apth, cli, apps]
 ---
@@ -27,4 +28,4 @@ With apth, the developer CLI, you can now go from signing in to a published appl
 
 - Creating from a template requires the Project to have a GitHub connection for creating apps.
 - Set secret values with `--sensitive KEY`; they are not shown again afterwards.
-- Ask your platform administrator how to obtain apth.
+- Get apth from [appthrust/cli on GitHub](https://github.com/appthrust/cli).

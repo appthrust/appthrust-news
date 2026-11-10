@@ -2,6 +2,7 @@
 title: Apply SQL to a database as a reviewed and approved change
 summary: From a database's Changes tab, submit SQL that changes its schema or data. Write the SQL in the form or load it from a file in a Git repository; it is checked for risky statements and approved where required before it is applied.
 publishedAt: 2026-05-26T11:20:00+09:00
+updatedAt: 2026-11-10T12:00:00+09:00
 category: feature
 tags: [databases, sql]
 ---
@@ -27,4 +28,4 @@ Developers who manage a database's schema and data can now submit SQL for a Post
 - A change that contains DELETE or UPDATE without WHERE, DROP DATABASE or DROP SCHEMA stops at review and does not run.
 - The SQL cannot be edited after the change is created. To correct it, create a new change.
 - Apply mode starts on Automatic. To check a change before it is applied, choose Manual before creating it.
-- Ask your platform administrator how to obtain apth.
+- Get apth from [appthrust/cli on GitHub](https://github.com/appthrust/cli).

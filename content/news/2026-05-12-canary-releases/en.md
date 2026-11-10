@@ -2,6 +2,7 @@
 title: New component versions are released gradually as canaries
 summary: A new version of a container component is released as a canary that moves traffic over a little at a time, and is promoted automatically once its checks pass. You can follow progress and roll back in the component's Releases tab.
 publishedAt: 2026-05-12T11:10:00+09:00
+updatedAt: 2026-11-10T12:00:00+09:00
 category: feature
 tags: [releases, canary]
 ---
@@ -24,4 +25,4 @@ A new version of a container component is released as a canary, with traffic mov
 - A canary is used when a version is already running.
 - `canaryMetrics` takes up to 32 metrics, and each release uses the values in place when it was created.
 - Rolling back and Resume auto require the Admin or Editor role in the Project.
-- Ask your platform administrator how to obtain apth.
+- Get apth from [appthrust/cli on GitHub](https://github.com/appthrust/cli).

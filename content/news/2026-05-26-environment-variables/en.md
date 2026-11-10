@@ -2,6 +2,7 @@
 title: Component environment variables can now be managed in the Dashboard
 summary: In a component's Environment variables tab, you can add, edit and delete variables and store values as secrets. Variables added by connected databases and caches are shown on the same screen.
 publishedAt: 2026-05-26T11:50:00+09:00
+updatedAt: 2026-11-10T12:00:00+09:00
 category: feature
 tags: [dashboard, apth, config]
 ---
@@ -25,4 +26,4 @@ The environment variables passed to a component can now be added, edited and del
 - Saving starts a new release of the component, and the change takes effect with that release.
 - Keys cannot be renamed; delete the variable and add it again. You cannot use a key already added by a connected resource.
 - Database and cache components do not have this tab.
-- Ask your platform administrator how to obtain apth.
+- Get apth from [appthrust/cli on GitHub](https://github.com/appthrust/cli).

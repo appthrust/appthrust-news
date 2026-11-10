@@ -2,6 +2,7 @@
 title: コンポーネントの新しいバージョンはカナリアで段階的にリリースされます
 summary: コンテナのコンポーネントの新しいバージョンは、トラフィックを少しずつ移すカナリアでリリースされ、確認が通ると自動で昇格します。進み具合の確認とロールバックは、コンポーネントの「リリース」タブでできます。
 publishedAt: 2026-05-12T11:10:00+09:00
+updatedAt: 2026-11-10T12:00:00+09:00
 category: feature
 tags: [releases, canary]
 ---
@@ -24,4 +25,4 @@ tags: [releases, canary]
 - カナリアで切り替えるのは、すでに動いているバージョンがあるときです。
 - `canaryMetrics` は 32 件までで、リリースの作成時点の内容が使われます。
 - ロールバックと「Resume auto」には、Project の「管理者」か「編集者」のロールが必要です。
-- apth の入手方法は、プラットフォームの管理者に確認してください。
+- apth は [GitHub の appthrust/cli](https://github.com/appthrust/cli) から入手できます。

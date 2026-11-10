@@ -2,6 +2,7 @@
 title: Component logs and metrics are now available in the Dashboard
 summary: See the latest logs from running pods in a component's Logs tab, and its CPU and memory usage in the Metrics tab. While Live is on, both update automatically.
 publishedAt: 2026-05-26T11:40:00+09:00
+updatedAt: 2026-11-10T12:00:00+09:00
 category: feature
 tags: [dashboard, logs, metrics]
 ---
@@ -25,4 +26,4 @@ You can now see the logs a component writes, along with its CPU and memory usage
 - Only the latest logs from pods that are running now are shown. Past logs are not kept, and there is no search.
 - When scaling to zero leaves no running pods, the Logs and Metrics tabs show "No workload pods are running yet." While Live is on, logs appear once a pod starts, without reloading the page.
 - Databases and jobs have no Metrics tab, and caches have neither tab.
-- Ask your platform administrator how to obtain apth.
+- Get apth from [appthrust/cli on GitHub](https://github.com/appthrust/cli).

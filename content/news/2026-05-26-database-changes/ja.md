@@ -2,6 +2,7 @@
 title: データベースへの SQL を、レビューと承認を経て「変更」として適用できるようになりました
 summary: データベースの「変更」タブから、スキーマやデータを変える SQL を提出できます。SQL は画面で書くか Git リポジトリのファイルから読み込み、危険な文の確認と必要な承認を経てから適用されます。
 publishedAt: 2026-05-26T11:20:00+09:00
+updatedAt: 2026-11-10T12:00:00+09:00
 category: feature
 tags: [databases, sql]
 ---
@@ -27,4 +28,4 @@ tags: [databases, sql]
 - WHERE のない DELETE や UPDATE、DROP DATABASE、DROP SCHEMA を含む変更はレビューで止まり、実行されません。
 - 作成後に SQL は編集できません。直すときは新しい変更を作ります。
 - 「適用モード」の初期値は「自動」です。適用の前に内容を確かめたいときは、「手動」を選んでから作成してください。
-- apth の入手方法は、プラットフォームの管理者に確認してください。
+- apth は [GitHub の appthrust/cli](https://github.com/appthrust/cli) から入手できます。
