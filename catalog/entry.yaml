@@ -12,6 +12,7 @@ spec:
   access:
     audiences: [appthrust-platform-api]
     scopes: [openid, profile, email]
+    tokenClaims: [groups]
   releaseIdentityEnvPrefix: APPTHRUST_NEWS
   updatePolicy: { default: follow, allowed: [follow, pinned] }
   versions: []   # written by hack/publish-entry.ts on tag; every element stream: "1"
