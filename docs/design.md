@@ -145,9 +145,9 @@ excludes its own tag; no earlier tag passes):
 
 | Route | Auth | Response |
 | --- | --- | --- |
-| `GET /healthz`, `GET /readyz` | none | 200 once content is parsed; `readyz` 503 while parsing or invalid |
-| `GET /releasez` | none | `releaseidentity.NewHandler("APPTHRUST_NEWS", …)` |
-| `GET /config` | none | `{ "projectId", "publicUrl" }` |
+| `GET /healthz`, `GET /readyz` | none in the app | 200 once content is parsed; `readyz` 503 while parsing or invalid |
+| `GET /releasez` | none in the app | `releaseidentity.NewHandler("APPTHRUST_NEWS", …)` |
+| `GET /config` | none in the app | `{ "projectId", "publicUrl" }` |
 | `GET /launcher` | bearer | `launcher.NewHandler` (Agent Guide convention) |
 | `GET /api/news/v1/items?locale=&category=&cursor=&limit=` | user bearer | `ItemList` |
 | `GET /api/news/v1/items/{id}?locale=` | user bearer | `Item`; 404 `not_found` |
@@ -235,11 +235,14 @@ One-time, to open the channel:
    (`ghcr.io/appthrust/catalog:latest`) projects `ApplicationStackDefinition/appthrust-news`
    on the next poll.
 4. Install in the Craftsman Project (`pj-a167a047c8d3`) from the Dashboard marketplace
-   (`POST /api/v1/projects/{id}/app-installations`), policy `follow`. `apth` has no install
-   command today (`app-installations` offers only `retry-release`).
-5. Readback: `AppInstallation` `Ready` and `Healthy`; a fresh connection to
-   `https://news.pj-a167a047c8d3.platform.craftsman-software.com/`; `/releasez` equals the
-   catalog version and digest; the app appears in the portal launcher.
+   (`POST /api/v1/projects/{id}/app-installations`), policy `follow`, or with
+   `apth app-installations install`.
+5. Readback: `AppInstallation` `Ready`; `status.resolvedImage` equals the catalog version
+   and digest; a fresh connection to
+   `https://news.pj-a167a047c8d3.platform.craftsman-software.com/` answers. On an installed
+   estate the OIDC edge sits in front of every path, including `/healthz` and `/releasez`
+   (observed on Craftsman: 302 to sign-in), so the release identity cannot be read
+   anonymously from outside; use `status.resolvedImage`.
 
 Per news item afterwards: PR → merge → tag `v1.x.(y+1)` → installations on `follow` roll
 without an operator. Expected latency is the image build plus catalog publication plus one
