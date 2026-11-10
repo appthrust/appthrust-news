@@ -2,6 +2,7 @@
 title: Update for 27 October 2026
 summary: This update adds application labels, scheduled jobs, point-in-time database restore, DNS checks for custom domains, access keys and an audit log.
 publishedAt: 2026-10-27T10:00:00+09:00
+updatedAt: 2026-11-10T11:30:00+09:00
 category: release
 tags: [dashboard, database, network, apth]
 ---
@@ -24,8 +25,8 @@ Here are the main changes in this update.
 ## Network and access
 
 - **Egress allowlist**: on installations with AppThrust Enterprise, the Project's Network settings now let you list the external domain names and CIDR ranges that workloads may reach. When logging of denied traffic is turned on, the same page lists the denied flows.
-- **Access keys**: API keys that work the same way from Project apps, local development and external services can now be issued, paused and revoked from the Access keys tab or with `apth access-keys`. The secret is shown only once, when the key is issued.
-- **Audit log**: Team administrators can now review the Team's activity under Audit in the Dashboard. Events can be filtered by period and other criteria, and each one expands to show its details.
+- **Access keys**: API keys that work the same way from Project apps, local development and external services can now be issued, paused and revoked from Access keys under a Project's Settings or with `apth access-keys`. The secret is shown only once, when the key is issued.
+- **Audit log**: activity can now be reviewed under Audit in the Dashboard by a Project's Admin and by users with the Auditor or Platform admin role. Events can be filtered by period and other criteria, and each one expands to show its details.
 
 ## Built-in apps
 

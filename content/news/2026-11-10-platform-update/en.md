@@ -2,6 +2,7 @@
 title: Update for 10 November 2026
 summary: This update adds app installation from the marketplace, access management with groups and roles, GitHub / Google sign-in configuration and automatic handling of runtime vulnerabilities.
 publishedAt: 2026-11-10T10:10:00+09:00
+updatedAt: 2026-11-10T11:30:00+09:00
 category: release
 tags: [dashboard, marketplace, apth, iam]
 ---
@@ -20,7 +21,7 @@ Here are the main changes in this update.
 
 ## Applications
 
-- **Handling runtime vulnerabilities**: applications created from the Next.js templates, from the Dashboard or apth, now use the managed Node.js 24 runtime by default and take runtime updates automatically. Even for a runtime set to manual updates, the fix for a Critical or High advisory is applied after a grace period, and you can follow it in the Project's Runtime advisories tab or with `apth runtime-advisories list`.
+- **Handling runtime vulnerabilities**: new applications created from the "Next.js" template, from the Dashboard or apth, now use the managed Node.js 24 runtime by default and take runtime updates automatically. Even for a runtime set to manual updates, the fix for a Critical or High advisory is applied after a grace period. When a component is affected, a "Security updates" badge appears on the Project overview; follow the status from there or with `apth runtime-advisories list`.
 
 ## Clusters
 
@@ -28,7 +29,7 @@ Here are the main changes in this update.
 
 ## Sign-in and access
 
-- **Access with groups and roles**: groups and roles replace teams for managing access. In a Project's Access tab, you give users or groups the Admin, Editor or Viewer role; groups are created in Platform settings.
+- **Access with groups and roles**: groups and roles replace teams for managing access. In a Project's Access tab, you give users or groups the Admin, Editor or Viewer role; groups are created under Groups on the Dashboard's Settings page.
 - **Sign in with GitHub or Google**: once an administrator configures it, members can sign in with a GitHub or Google account.
 - **Re-mapping a group**: a group mapped to an external identity provider group can be re-mapped to another value from the Dashboard. Access is never dropped part-way through.
 - **Managing AI policies**: platform administrators can create and edit the organisation's AI policies on the AI policies page in the Dashboard. Each Project can bind a policy in its AI tab and restrict it further.
