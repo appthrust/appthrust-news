@@ -3,7 +3,7 @@ module github.com/appthrust/appthrust-news
 go 1.26.0
 
 require (
-	github.com/appthrust/appserver-go v0.3.0
+	github.com/appthrust/appserver-go v0.7.0
 	github.com/stretchr/testify v1.11.1
 	github.com/yuin/goldmark v1.4.13
 	gopkg.in/yaml.v3 v3.0.1

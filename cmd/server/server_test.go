@@ -49,6 +49,33 @@ func userBearer() string {
 	return "Bearer eyJhbGciOiJub25lIn0." + base64.RawURLEncoding.EncodeToString([]byte(`{"sub":"user-one","email":"one@example.test","name":"Display Name"}`)) + "."
 }
 
+func TestServerLogsFailedReadiness(t *testing.T) {
+	environment(t)
+	handler := fixtureHandler(t, "missing-ja")
+	output, err := os.CreateTemp(t.TempDir(), "request-log")
+	require.NoError(t, err)
+	defer output.Close()
+	stderr := os.Stderr
+	os.Stderr = output
+	defer func() { os.Stderr = stderr }()
+
+	server := newServer(":8080", handler)
+	response := call(server.Handler, "/readyz?debug=private-query-marker", "")
+	require.Equal(t, http.StatusServiceUnavailable, response.Code)
+	line, err := os.ReadFile(output.Name())
+	require.NoError(t, err)
+	var entry struct {
+		Service   string `json:"service"`
+		Path      string `json:"path"`
+		ErrorCode string `json:"error_code"`
+	}
+	require.NoError(t, json.Unmarshal(line, &entry))
+	require.Equal(t, "appthrust-news", entry.Service)
+	require.Equal(t, "/readyz", entry.Path)
+	require.Equal(t, "content_unavailable", entry.ErrorCode)
+	require.NotContains(t, string(line), "private-query-marker")
+}
+
 func TestPublicRoutesAndBearerBoundaries(t *testing.T) {
 	environment(t)
 	handler := fixtureHandler(t, "valid")

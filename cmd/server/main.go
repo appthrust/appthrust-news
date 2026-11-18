@@ -12,6 +12,7 @@ import (
 	"time"
 
 	"github.com/appthrust/appserver-go/appserver/platformenv"
+	"github.com/appthrust/appserver-go/appserver/requestlog"
 	"github.com/appthrust/appthrust-news/cmd/server/internal/content"
 	embedded "github.com/appthrust/appthrust-news/content"
 )
@@ -39,7 +40,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	server := &http.Server{Addr: *listen, Handler: handler, ReadHeaderTimeout: 10 * time.Second}
+	server := newServer(*listen, handler)
 	ctx, stop := signal.NotifyContext(context.Background(), syscall.SIGINT, syscall.SIGTERM)
 	defer stop()
 	go func() {
@@ -53,5 +54,13 @@ func main() {
 	log.Printf("appthrust-news-server listening on %s", *listen)
 	if err := server.ListenAndServe(); err != nil && !errors.Is(err, http.ErrServerClosed) {
 		log.Fatal(err)
+	}
+}
+
+func newServer(addr string, handler http.Handler) *http.Server {
+	return &http.Server{
+		Addr:              addr,
+		Handler:           requestlog.Wrap(handler, requestlog.Options{Service: "appthrust-news"}),
+		ReadHeaderTimeout: 10 * time.Second,
 	}
 }
